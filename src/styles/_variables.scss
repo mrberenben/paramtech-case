@@ -1,0 +1,44 @@
+:root {
+  /* colors */
+  --colors-green: 238, 254, 125;
+  --colors-green-active: 218, 234, 105;
+  --colors-teal: 95, 208, 180;
+  --colors-pink: 255, 156, 221;
+  --colors-blue: 112, 172, 254;
+  --colors-purple: 200, 145, 243;
+  --colors-yellow: 255, 233, 39;
+
+  --colors-dark-default: #000;
+  --colors-dark-100: #0d0d0f;
+  --colors-dark-200: #17181a;
+  --colors-dark-300: #222427;
+  --colors-dark-400: #323438;
+  --colors-dark-500: #404145;
+  --colors-dark-600: #4a4b4c;
+  --colors-dark-700: #57585a;
+  --colors-dark-800: #66686a;
+  --colors-dark-900: #737579;
+
+  --colors-light-default: #fffffe;
+  --colors-light-100: #f6f6fa;
+  --colors-light-200: #e8eaef;
+  --colors-light-300: #d6d8da;
+  --colors-light-400: #c4c4c9;
+  --colors-light-500: #b0b1b4;
+  --colors-light-600: #a1a3a5;
+  --colors-light-700: #909294;
+  --colors-light-800: #838484;
+  --colors-light-900: #78797a;
+
+  /* misc */
+  --misc-radius-xs: 4px;
+  --misc-radius-s: 6px;
+  --misc-radius-m: 8px;
+  --misc-radius-l: 12px;
+  --misc-radius-xl: 16px;
+  --misc-radius-xxl: 32px;
+  --misc-radius-rounded: 100%;
+
+  /* animations */
+  --transition-curve: cubic-bezier(0.62, 0.05, 0.01, 0.99);
+}

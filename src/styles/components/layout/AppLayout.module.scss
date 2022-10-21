@@ -1,0 +1,21 @@
+.app_layout {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  &_header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1.5rem 3rem;
+    border-block-end: 1px solid var(--colors-light-300);
+  }
+
+  &_main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+}
