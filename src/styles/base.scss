@@ -176,3 +176,12 @@ textarea {
 #mount {
   block-size: 100%;
 }
+
+.icon {
+  display: flex;
+
+  svg {
+    inline-size: 100%;
+    block-size: 100%;
+  }
+}

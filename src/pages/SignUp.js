@@ -9,10 +9,11 @@ import { signup } from "src/features/auth/authSlice";
 // components
 import Button from "src/components/button";
 import { Logo } from "src/components/icons";
-import { EnvelopeIcon, UserIcon } from "src/components/icons/index";
+import { EnvelopeIcon, UserIcon } from "src/components/icons";
 
 // utils
 import API from "src/utils/api";
+import Fetch from "src/utils/fetch";
 
 const SignUp = () => {
   const dispatch = useDispatch();
@@ -36,37 +37,21 @@ const SignUp = () => {
       }));
 
       const formData = new FormData();
-      const controller = new AbortController();
 
       formData.append("fullName", name.current.value);
       formData.append("email", email.current.value);
 
-      const res = await fetch(
-        `${process.env.REACT_APP_BASE_API_URL}${API.SIGN_UP}`,
-        {
-          signal: controller.signal,
-          method: "POST",
-          headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Content-Type": "multipart/form-data"
-          },
-          body: formData
-        }
-      );
+      const res = await Fetch(API.SIGN_UP, "POST", formData, true);
 
-      if (
-        res.status !== 200 ||
-        res.status !== 201 ||
-        res.statusText !== "Created"
-      ) {
+      if (res.error) {
         setResponse(current => ({
           ...current,
           error: true,
           loading: false
         }));
-      }
 
-      const data = await res.json();
+        return;
+      }
 
       // register
       dispatch(
@@ -74,7 +59,7 @@ const SignUp = () => {
       );
       setResponse(current => ({
         ...current,
-        data,
+        data: res.data,
         loading: false
       }));
       navigate("/");

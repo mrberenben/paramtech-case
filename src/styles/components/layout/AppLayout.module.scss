@@ -11,7 +11,7 @@
     justify-content: space-between;
     align-items: center;
 
-    padding: 1.5rem 3rem;
+    padding: 0.75rem 3rem;
     border-block-end: 1px solid var(--colors-light-300);
 
     background-color: #fff;
@@ -19,11 +19,38 @@
     &_logo {
       display: flex;
     }
+
+    &_auth {
+      display: flex;
+
+      button {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+
+        gap: 0.625rem;
+        padding: 0.875rem 0.5rem;
+        border-radius: var(--radius-md);
+        background-color: transparent;
+
+        transition: 150ms background-color var(--transition-curve);
+        will-change: cursor, background-color;
+
+        @media screen and (hover: hover) and (pointer: fine) {
+          &:hover {
+            cursor: pointer;
+            background-color: var(--colors-light-200);
+          }
+        }
+      }
+    }
   }
 
   &_main {
     display: flex;
     flex-direction: column;
     flex: 1;
+
+    padding-block: 2rem;
   }
 }

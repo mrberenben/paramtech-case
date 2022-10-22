@@ -1,15 +1,24 @@
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import styles from "src/styles/components/layout/AppLayout.module.scss";
 
 // redux
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "src/features/auth/authSlice";
 
 // components
-import { Logo } from "src/components/icons";
+import { Logo, AvatarIcon } from "src/components/icons";
+import { ChevronDownIcon } from "../icons/index";
 
 const AppLayout = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const auth = useSelector(state => state.auth);
+  const dispatch = useDispatch();
+
+  const handleLogout = () => {
+    dispatch(logout());
+    navigate("/sign-up");
+  };
 
   return (
     <div className={styles.app_layout}>
@@ -19,7 +28,10 @@ const AppLayout = () => {
             <Logo />
           </div>
           <div className={styles.app_layout_header_auth}>
-            {auth.name || "Logout"}
+            <button type="button" onClick={() => handleLogout()}>
+              <AvatarIcon />
+              {auth.name}
+            </button>
           </div>
         </header>
       )}
