@@ -1,0 +1,81 @@
+.auth {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &_card {
+    display: flex;
+    flex-direction: column;
+
+    max-inline-size: 520px;
+    inline-size: 100%;
+
+    border-radius: var(--radius-sm);
+    background-color: var(--colors-light-100);
+    border: 1px solid var(--colors-light-300);
+
+    &_header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding-block: 3rem 4rem;
+    }
+
+    &_body {
+      display: flex;
+      flex-direction: column;
+
+      padding: 0 2rem 2rem;
+
+      .form {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        &_row {
+          display: flex;
+          flex-direction: column;
+          gap: 0.375rem;
+
+          label {
+            letter-spacing: -0.0125rem;
+            font-weight: 500;
+          }
+
+          &_input {
+            position: relative;
+            display: flex;
+            flex: 1;
+            align-items: center;
+
+            input {
+              inline-size: 100%;
+
+              border-radius: var(--radius-sm);
+              background-color: var(--colors-light-default);
+              outline: 1px solid var(--colors-light-300);
+
+              padding: 0.875rem 1rem 0.875rem 2.75rem;
+
+              will-change: outline;
+
+              &:focus {
+                outline: 2px solid var(--colors-light-500);
+              }
+            }
+
+            span {
+              position: absolute;
+              display: flex;
+
+              margin-inline-start: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

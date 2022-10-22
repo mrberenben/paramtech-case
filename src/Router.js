@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AppLayout from "src/components/layout";
 
 // pages
-import SignIn from "src/pages/SignIn";
+import SignUp from "src/pages/SignIn";
 import HomePage from "src/pages/Home";
 
 // utils
@@ -23,7 +23,7 @@ const Router = () => {
               </ProtectedRoute>
             }
           />
-          <Route path="sign-in" element={<SignIn />} />
+          <Route path="sign-up" element={<SignUp />} />
         </Route>
       </Routes>
     </BrowserRouter>

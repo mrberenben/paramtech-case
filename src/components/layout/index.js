@@ -1,16 +1,26 @@
 import { Outlet, useLocation } from "react-router-dom";
 import styles from "src/styles/components/layout/AppLayout.module.scss";
 
-const { default: APP_LOGO } = require("../../assets/logo.svg");
+// redux
+import { useSelector } from "react-redux";
+
+// components
+import { Logo } from "src/components/icons";
 
 const AppLayout = () => {
   const location = useLocation();
+  const auth = useSelector(state => state.auth);
 
   return (
     <div className={styles.app_layout}>
-      {location.pathname !== "/sign-in" && (
+      {location.pathname !== "/sign-up" && (
         <header className={styles.app_layout_header}>
-          <img src={APP_LOGO} alt="Paramtech" />
+          <div className={styles.app_layout_header_logo}>
+            <Logo />
+          </div>
+          <div className={styles.app_layout_header_auth}>
+            {auth.name || "Logout"}
+          </div>
         </header>
       )}
 

@@ -103,7 +103,7 @@ video {
 html,
 body {
   scroll-behavior: smooth;
-  min-block-size: 100%;
+  block-size: 100%;
 }
 
 body {
@@ -174,5 +174,5 @@ textarea {
 }
 
 #mount {
-  min-block-size: 100%;
+  block-size: 100%;
 }

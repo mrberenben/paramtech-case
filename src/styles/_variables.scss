@@ -1,12 +1,7 @@
 :root {
   /* colors */
-  --colors-green: 238, 254, 125;
+  --colors-primary: 24, 144, 255;
   --colors-green-active: 218, 234, 105;
-  --colors-teal: 95, 208, 180;
-  --colors-pink: 255, 156, 221;
-  --colors-blue: 112, 172, 254;
-  --colors-purple: 200, 145, 243;
-  --colors-yellow: 255, 233, 39;
 
   --colors-dark-default: #000;
   --colors-dark-100: #0d0d0f;
@@ -30,14 +25,14 @@
   --colors-light-800: #838484;
   --colors-light-900: #78797a;
 
-  /* misc */
-  --misc-radius-xs: 4px;
-  --misc-radius-s: 6px;
-  --misc-radius-m: 8px;
-  --misc-radius-l: 12px;
-  --misc-radius-xl: 16px;
-  --misc-radius-xxl: 32px;
-  --misc-radius-rounded: 100%;
+  /* utils */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-xxl: 32px;
+  --radius-rounded: 100%;
 
   /* animations */
   --transition-curve: cubic-bezier(0.62, 0.05, 0.01, 0.99);

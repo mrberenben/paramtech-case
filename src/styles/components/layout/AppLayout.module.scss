@@ -3,6 +3,8 @@
   flex-direction: column;
   flex: 1;
 
+  block-size: 100%;
+
   &_header {
     position: relative;
     display: flex;
@@ -13,6 +15,10 @@
     border-block-end: 1px solid var(--colors-light-300);
 
     background-color: #fff;
+
+    &_logo {
+      display: flex;
+    }
   }
 
   &_main {

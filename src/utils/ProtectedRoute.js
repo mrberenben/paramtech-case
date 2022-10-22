@@ -1,11 +1,12 @@
 import { useLocation, Navigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const ProtectedRoute = ({ children }) => {
   const location = useLocation();
-  const auth = true;
+  const { authenticated } = useSelector(state => state.auth);
 
-  if (!auth) {
-    return <Navigate to="/sign-in" state={{ from: location }} />;
+  if (!authenticated) {
+    return <Navigate to="/sign-up" state={{ from: location }} />;
   }
 
   return children;

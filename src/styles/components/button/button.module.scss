@@ -1,0 +1,37 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  inline-size: fit-content;
+  block-size: 54px;
+  padding-inline: 1.375rem;
+
+  font-weight: 500;
+
+  border-radius: var(--radius-md);
+
+  transition: 150ms filter var(--transition-curve);
+  will-change: filter, cursor;
+
+  @media screen and (hover: hover) and (pointer: fine) {
+    &:hover {
+      cursor: pointer;
+      filter: brightness(0.935);
+    }
+  }
+
+  &.primary {
+    background-color: rgb(var(--colors-primary));
+    color: var(--colors-light-default);
+  }
+
+  &.stretch {
+    inline-size: 100%;
+  }
+
+  &:is(:disabled) {
+    cursor: not-allowed;
+    filter: brightness(0.875);
+  }
+}

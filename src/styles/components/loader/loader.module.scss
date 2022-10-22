@@ -1,0 +1,25 @@
+.loader {
+  display: flex;
+
+  inline-size: 2rem;
+  block-size: 2rem;
+
+  border: 3px solid var(--colors-light-default);
+  border-bottom-color: transparent;
+  border-radius: var(--radius-rounded);
+
+  @media (prefers-reduced-motion: no-preference) {
+    & {
+      animation: spin 1s linear infinite;
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
