@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "src/styles/pages/payment.module.scss";
 
@@ -15,6 +15,7 @@ import Button from "src/components/button";
 // utils
 import Fetch from "src/utils/fetch";
 import API from "src/utils/api";
+import Loader from "src/components/loader/index";
 
 const Payment = () => {
   const navigate = useNavigate();
@@ -28,6 +29,7 @@ const Payment = () => {
   });
   const [cardSide, setCardSide] = useState("front");
   const [loading, setLoading] = useState(false);
+  const agreementRef = useRef(null);
 
   useEffect(() => {
     const fetchAgreement = async () => {
@@ -74,6 +76,12 @@ const Payment = () => {
     setLoading(false);
     navigate("/payment/success");
   }, [card]);
+
+  useEffect(() => {
+    if (agreement && agreementRef?.current) {
+      agreementRef.current.innerHTML = decodeURIComponent(agreement);
+    }
+  }, [agreement, agreementRef]);
 
   return (
     <Container>
@@ -212,11 +220,7 @@ const Payment = () => {
                   <h6>Sözleşme</h6>
                 </header>
                 <div className={styles.agreement_body}>
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: decodeURIComponent(agreement)
-                    }}
-                  />
+                  {agreement ? <div ref={agreementRef} /> : <Loader />}
                 </div>
               </div>
             </div>
