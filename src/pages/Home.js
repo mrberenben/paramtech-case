@@ -1,4 +1,5 @@
-import { useCallback, useEffect } from "react";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "src/styles/pages/home.module.scss";
 
 // redux
@@ -7,15 +8,16 @@ import { selectPackage, setPackages } from "src/features/package/packageSlice";
 
 // components
 import Container from "src/components/layout/container";
+import Button from "src/components/button/index";
 
 // utils
 import API from "src/utils/api";
 import Fetch from "src/utils/fetch";
-import Button from "src/components/button/index";
 
 const HomePage = () => {
   const { packages, basket } = useSelector(state => state.package);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchPackages = async () => {
@@ -86,7 +88,9 @@ const HomePage = () => {
               Seçilen Paket Tutarı: <strong>{basket.total}₺</strong>
             </div>
 
-            <Button variant="primary">Devam Et</Button>
+            <Button variant="primary" onClick={() => navigate("/payment")}>
+              Devam Et
+            </Button>
           </div>
         </div>
       </Container>

@@ -1,4 +1,4 @@
-import { Outlet, useLocation, useNavigate } from "react-router-dom";
+import { Outlet, useLocation, useNavigate, Link } from "react-router-dom";
 import styles from "src/styles/components/layout/AppLayout.module.scss";
 
 // redux
@@ -7,7 +7,6 @@ import { logout } from "src/features/auth/authSlice";
 
 // components
 import { Logo, AvatarIcon } from "src/components/icons";
-import { ChevronDownIcon } from "../icons/index";
 
 const AppLayout = () => {
   const location = useLocation();
@@ -24,11 +23,11 @@ const AppLayout = () => {
     <div className={styles.app_layout}>
       {location.pathname !== "/sign-up" && (
         <header className={styles.app_layout_header}>
-          <div className={styles.app_layout_header_logo}>
+          <Link to="/" className={styles.app_layout_header_logo}>
             <Logo />
-          </div>
+          </Link>
           <div className={styles.app_layout_header_auth}>
-            <button type="button" onClick={() => handleLogout()}>
+            <button type="button" onClick={() => handleLogout()} title="logout">
               <AvatarIcon />
               {auth.name}
             </button>

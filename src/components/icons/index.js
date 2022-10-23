@@ -108,4 +108,51 @@ const ChevronDownIcon = () => (
   </span>
 );
 
-export { Logo, UserIcon, EnvelopeIcon, AvatarIcon, ChevronDownIcon };
+const CheckIcon = () => (
+  <span className="icon">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>
+  </span>
+);
+
+const SuccessIcon = () => (
+  <span className="icon">
+    <svg
+      width="120"
+      height="120"
+      viewBox="0 0 120 120"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M85.0443 38.7012H78.763C77.3969 38.7012 76.0978 39.3574 75.2943 40.4824L54.2407 69.6789L44.705 56.4467C43.9014 55.3351 42.6157 54.6655 41.2362 54.6655H34.955C34.0844 54.6655 33.5755 55.6565 34.0844 56.3664L50.7719 79.5092C51.1661 80.0594 51.6858 80.5078 52.2879 80.8171C52.89 81.1263 53.5571 81.2877 54.234 81.2877C54.9109 81.2877 55.578 81.1263 56.1801 80.8171C56.7821 80.5078 57.3018 80.0594 57.696 79.5092L85.9014 40.4021C86.4237 39.6922 85.9148 38.7012 85.0443 38.7012Z"
+        fill="#009C10"
+      />
+      <path
+        d="M60 0C26.8661 0 0 26.8661 0 60C0 93.1339 26.8661 120 60 120C93.1339 120 120 93.1339 120 60C120 26.8661 93.1339 0 60 0ZM60 109.821C32.4911 109.821 10.1786 87.5089 10.1786 60C10.1786 32.4911 32.4911 10.1786 60 10.1786C87.5089 10.1786 109.821 32.4911 109.821 60C109.821 87.5089 87.5089 109.821 60 109.821Z"
+        fill="#009C10"
+      />
+    </svg>
+  </span>
+);
+
+export {
+  Logo,
+  UserIcon,
+  EnvelopeIcon,
+  AvatarIcon,
+  ChevronDownIcon,
+  CheckIcon,
+  SuccessIcon
+};

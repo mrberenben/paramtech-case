@@ -1,0 +1,37 @@
+.payment_success {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+
+  inline-size: 100%;
+  block-size: 100%;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--colors-light-100);
+    border: 1px solid var(--colors-light-300);
+    border-radius: var(--radius-sm);
+
+    padding: 4rem;
+    gap: 3rem;
+
+    & span {
+      display: flex;
+
+      inline-size: 6rem;
+      block-size: 6rem;
+    }
+
+    & p {
+      font-size: 24px;
+      font-weight: 700;
+      color: #fffffe;
+    }
+  }
+}

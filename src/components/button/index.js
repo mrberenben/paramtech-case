@@ -4,7 +4,15 @@ import styles from "src/styles/components/button/button.module.scss";
 // components
 import Loader from "src/components/loader";
 
-const Button = ({ variant, type, loading, disabled, stretch, children }) => {
+const Button = ({
+  variant,
+  type,
+  loading,
+  disabled,
+  stretch,
+  onClick,
+  children
+}) => {
   return (
     <button
       type={type || "button"}
@@ -12,6 +20,7 @@ const Button = ({ variant, type, loading, disabled, stretch, children }) => {
       className={`${styles.button} ${styles[variant]} ${
         stretch ? styles.stretch : ""
       }`}
+      onClick={onClick}
     >
       {loading ? <Loader /> : children}
     </button>
@@ -26,5 +35,6 @@ Button.propTypes = {
   loading: PropTypes.bool,
   disabled: PropTypes.bool,
   stretch: PropTypes.bool,
+  onClick: PropTypes.func,
   children: PropTypes.node.isRequired
 };

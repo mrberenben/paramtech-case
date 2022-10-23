@@ -4,7 +4,7 @@
   align-items: center;
 
   inline-size: fit-content;
-  block-size: 54px;
+  block-size: 48px;
   padding-inline: 1.375rem;
 
   font-weight: 500;
@@ -23,7 +23,7 @@
 
   &.primary {
     background-color: rgb(var(--colors-primary));
-    color: var(--colors-light-default);
+    color: #fffffe;
   }
 
   &.stretch {

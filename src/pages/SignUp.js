@@ -14,6 +14,7 @@ import { EnvelopeIcon, UserIcon } from "src/components/icons";
 // utils
 import API from "src/utils/api";
 import Fetch from "src/utils/fetch";
+import { CheckIcon } from "src/components/icons/index";
 
 const SignUp = () => {
   const dispatch = useDispatch();
@@ -62,7 +63,10 @@ const SignUp = () => {
         data: res.data,
         loading: false
       }));
-      navigate("/");
+
+      setTimeout(() => {
+        navigate("/");
+      }, 2000);
     }
   };
 
@@ -110,7 +114,7 @@ const SignUp = () => {
                 stretch={true}
                 loading={response.loading}
               >
-                Devam Et
+                {response.data ? <CheckIcon /> : "Devam Et"}
               </Button>
             </div>
           </form>

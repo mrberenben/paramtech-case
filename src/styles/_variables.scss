@@ -2,13 +2,15 @@
   /* colors */
   --colors-primary: 24, 144, 255;
   --colors-green: 122, 197, 0;
+  --colors-mastercard-red: #eb001b;
+  --colors-mastercard-yellow: #ff5f00;
 
-  --colors-light-default: #fffffe;
-  --colors-light-100: #f6f6fa;
-  --colors-light-200: #ebecee;
-  --colors-light-300: #d6d8da;
-  --colors-light-400: #c4c4c9;
-  --colors-light-500: #b0b1b4;
+  --colors-light-default: #000;
+  --colors-light-100: #111;
+  --colors-light-200: #262626;
+  --colors-light-300: #343434;
+  --colors-light-400: #474747;
+  --colors-light-500: #565656;
   --colors-light-600: #a1a3a5;
   --colors-light-700: #909294;
   --colors-light-800: #838484;
@@ -22,6 +24,8 @@
   --radius-xl: 16px;
   --radius-xxl: 32px;
   --radius-rounded: 100%;
+
+  --shadow-sm: 0 0 0 / 6%;
 
   /* animations */
   --transition-curve: cubic-bezier(0.62, 0.05, 0.01, 0.99);

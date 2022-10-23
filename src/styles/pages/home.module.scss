@@ -17,7 +17,7 @@
 
     .packages {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       grid-auto-rows: 1fr;
       gap: 2rem;
 
@@ -26,12 +26,12 @@
 
       .package {
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: row wrap;
         align-items: stretch;
 
         border-radius: var(--radius-sm);
-        background-color: var(--colors-light-200);
-        outline: 3px solid transparent;
+        background-color: var(--colors-light-default);
+        outline: 1px solid var(--colors-light-300);
         overflow: hidden;
 
         will-change: cursor, outline;
@@ -44,13 +44,15 @@
         }
 
         &.selected {
-          outline-color: rgb(var(--colors-green));
+          outline-color: rgb(var(--colors-primary));
+          outline-width: 3px;
         }
 
         &_image {
           display: flex;
-          inline-size: 192px;
-          block-size: 140px;
+          inline-size: 100%;
+          min-inline-size: 240px;
+          block-size: 180px;
 
           img {
             inline-size: 100%;
@@ -64,7 +66,7 @@
           flex: 1;
           flex-direction: column;
 
-          padding: 1rem 1.25rem 0;
+          padding: 1rem 1.25rem;
 
           &_name {
             display: flex;
@@ -98,6 +100,7 @@
             align-items: center;
 
             border-block-start: 1px solid var(--colors-light-300);
+            padding-block-start: 0.75rem;
             gap: 0.5rem;
 
             li {

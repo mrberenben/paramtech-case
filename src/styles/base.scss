@@ -109,8 +109,8 @@ body {
 body {
   margin: 0;
   padding: 0;
-  background-color: #fff;
-  color: #000;
+  background-color: #000;
+  color: #fffffe;
   font: normal normal 16px/1.4387 Inter, -apple-system, Helvetica, Arial,
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -156,6 +156,23 @@ input {
   padding: 0;
   background-color: transparent;
   font: inherit;
+}
+
+input {
+  inline-size: 100%;
+
+  border-radius: var(--radius-sm);
+  background-color: var(--colors-light-default);
+  outline: 1px solid var(--colors-light-300);
+  color: #fffffe;
+
+  padding: 0.875rem 1.125rem;
+
+  will-change: outline;
+
+  &:focus {
+    outline: 2px solid var(--colors-light-500);
+  }
 }
 
 ul,
