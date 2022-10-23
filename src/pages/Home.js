@@ -8,7 +8,7 @@ import { selectPackage, setPackages } from "src/features/package/packageSlice";
 
 // components
 import Container from "src/components/layout/container";
-import Button from "src/components/button/index";
+import Button from "src/components/button";
 
 // utils
 import API from "src/utils/api";

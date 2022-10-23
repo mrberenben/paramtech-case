@@ -10,7 +10,7 @@ import { useSelector } from "react-redux";
 
 // components
 import Container from "src/components/layout/container";
-import Button from "src/components/button/index";
+import Button from "src/components/button";
 
 // utils
 import Fetch from "src/utils/fetch";

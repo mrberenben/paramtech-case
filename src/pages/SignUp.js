@@ -8,12 +8,11 @@ import { signup } from "src/features/auth/authSlice";
 
 // components
 import Button from "src/components/button";
-import { EnvelopeIcon, UserIcon, Logo } from "src/components/icons";
+import { EnvelopeIcon, UserIcon, Logo, CheckIcon } from "src/components/icons";
 
 // utils
 import API from "src/utils/api";
 import Fetch from "src/utils/fetch";
-import { CheckIcon } from "src/components/icons/index";
 
 const SignUp = () => {
   const dispatch = useDispatch();
