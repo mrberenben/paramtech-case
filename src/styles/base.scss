@@ -162,8 +162,8 @@ input {
   inline-size: 100%;
 
   border-radius: var(--radius-sm);
-  background-color: var(--colors-light-default);
-  outline: 1px solid var(--colors-light-300);
+  background-color: var(--colors-shade-default);
+  outline: 1px solid var(--colors-shade-300);
   color: #fffffe;
 
   padding: 0.875rem 1.125rem;
@@ -171,7 +171,7 @@ input {
   will-change: outline;
 
   &:focus {
-    outline: 2px solid var(--colors-light-500);
+    outline: 2px solid var(--colors-shade-500);
   }
 }
 

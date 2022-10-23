@@ -1,0 +1,23 @@
+@mixin breakpoint($query) {
+  @if $query == "xs" {
+    @media screen and (max-width: 575px) {
+      @content;
+    }
+  } @else if $query == "sm" {
+    @media screen and (max-width: 767px) {
+      @content;
+    }
+  } @else if $query == "md" {
+    @media screen and (max-width: 991px) {
+      @content;
+    }
+  } @else if $query == "lg" {
+    @media screen and (max-width: 1199px) {
+      @content;
+    }
+  } @else if $query == "xl" {
+    @media screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+}

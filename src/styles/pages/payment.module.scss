@@ -1,18 +1,28 @@
+@import "../mixins";
+
 .payment {
   display: grid;
   grid-template-columns: repeat(8, 1fr) repeat(4, minmax(48px, 1fr));
-  grid-template-rows: 1fr;
+  grid-auto-rows: 1fr;
+
+  @include breakpoint("md") {
+    gap: 1rem;
+  }
 
   .main {
     grid-column: 1 / span 7;
     grid-row-start: 1;
 
+    @include breakpoint("md") {
+      grid-column: 1 / span 12;
+    }
+
     .payment_card {
       display: flex;
       flex-direction: column;
 
-      background-color: var(--colors-light-100);
-      border: 1px solid var(--colors-light-300);
+      background-color: var(--colors-shade-100);
+      border: 1px solid var(--colors-shade-300);
       border-radius: var(--radius-md);
 
       padding: 1.5rem;
@@ -113,7 +123,7 @@
                   inline-size: 100%;
                   block-size: 100%;
 
-                  background-color: var(--colors-light-400);
+                  background-color: var(--colors-shade-400);
                   border-radius: var(--radius-md);
 
                   transition: 450ms transform var(--transition-curve);
@@ -239,7 +249,7 @@
                       display: flex;
                       flex: 1;
 
-                      background-color: var(--colors-light-300);
+                      background-color: var(--colors-shade-300);
                       block-size: 32px;
 
                       &::before {
@@ -298,8 +308,8 @@
 
           padding: 1rem;
           border-radius: var(--radius-sm);
-          background-color: var(--colors-light-default);
-          border: 1px solid var(--colors-light-300);
+          background-color: var(--colors-shade-default);
+          border: 1px solid var(--colors-shade-300);
 
           inline-size: 100%;
           block-size: 100%;
@@ -312,12 +322,17 @@
     grid-column: 9 / span 4;
     grid-row-start: 1;
 
+    @include breakpoint("md") {
+      grid-column: 1 / span 12;
+      grid-row-start: 2;
+    }
+
     &_card {
       display: flex;
       flex-direction: column;
 
-      background-color: var(--colors-light-100);
-      border: 1px solid var(--colors-light-300);
+      background-color: var(--colors-shade-100);
+      border: 1px solid var(--colors-shade-300);
       border-radius: var(--radius-md);
 
       padding: 1.5rem;
@@ -337,7 +352,7 @@
 
         & span {
           font-size: 14px;
-          color: var(--colors-light-800);
+          color: var(--colors-shade-800);
         }
       }
 
@@ -354,8 +369,8 @@
           padding: 1.125rem 1rem;
 
           border-radius: var(--radius-sm);
-          background-color: var(--colors-light-default);
-          border: 1px solid var(--colors-light-300);
+          background-color: var(--colors-shade-default);
+          border: 1px solid var(--colors-shade-300);
 
           &_name {
             font-weight: 600;
@@ -364,7 +379,7 @@
 
           &_price {
             font-size: 14px;
-            color: var(--colors-light-900);
+            color: var(--colors-shade-900);
           }
         }
 
@@ -375,7 +390,7 @@
 
           margin-block: 0.5rem;
           padding-block: 0.5rem;
-          border-block-end: 1px solid var(--colors-light-300);
+          border-block-end: 1px solid var(--colors-shade-300);
 
           & strong {
             font-weight: 700;

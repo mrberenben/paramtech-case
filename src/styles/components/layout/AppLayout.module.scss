@@ -12,7 +12,7 @@
     align-items: center;
 
     padding: 0.75rem 3rem;
-    border-block-end: 1px solid var(--colors-light-300);
+    border-block-end: 1px solid var(--colors-shade-300);
 
     background-color: #000;
 
@@ -41,7 +41,7 @@
         @media screen and (hover: hover) and (pointer: fine) {
           &:hover {
             cursor: pointer;
-            background-color: var(--colors-light-200);
+            background-color: var(--colors-shade-200);
           }
         }
       }

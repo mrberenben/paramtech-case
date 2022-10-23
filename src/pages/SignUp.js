@@ -8,8 +8,7 @@ import { signup } from "src/features/auth/authSlice";
 
 // components
 import Button from "src/components/button";
-import { Logo } from "src/components/icons";
-import { EnvelopeIcon, UserIcon } from "src/components/icons";
+import { EnvelopeIcon, UserIcon, Logo } from "src/components/icons";
 
 // utils
 import API from "src/utils/api";

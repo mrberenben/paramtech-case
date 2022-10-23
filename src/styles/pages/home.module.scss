@@ -7,8 +7,8 @@
     display: flex;
     flex-direction: column;
 
-    background-color: var(--colors-light-100);
-    border: 1px solid var(--colors-light-300);
+    background-color: var(--colors-shade-100);
+    border: 1px solid var(--colors-shade-300);
     border-radius: var(--radius-md);
 
     padding: 1.5rem 1.5rem 1rem;
@@ -17,7 +17,7 @@
 
     .packages {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       grid-auto-rows: 1fr;
       gap: 2rem;
 
@@ -30,8 +30,8 @@
         align-items: stretch;
 
         border-radius: var(--radius-sm);
-        background-color: var(--colors-light-default);
-        outline: 1px solid var(--colors-light-300);
+        background-color: var(--colors-shade-default);
+        outline: 1px solid var(--colors-shade-300);
         overflow: hidden;
 
         will-change: cursor, outline;
@@ -39,7 +39,7 @@
         @media screen and (hover: hover) and (pointer: fine) {
           &:hover {
             cursor: pointer;
-            outline-color: var(--colors-light-400);
+            outline-color: var(--colors-shade-400);
           }
         }
 
@@ -51,7 +51,6 @@
         &_image {
           display: flex;
           inline-size: 100%;
-          min-inline-size: 240px;
           block-size: 180px;
 
           img {
@@ -99,7 +98,7 @@
             flex: 1;
             align-items: center;
 
-            border-block-start: 1px solid var(--colors-light-300);
+            border-block-start: 1px solid var(--colors-shade-300);
             padding-block-start: 0.75rem;
             gap: 0.5rem;
 
@@ -109,7 +108,7 @@
               align-items: center;
 
               padding: 0.25rem 0.5rem;
-              background-color: var(--colors-light-400);
+              background-color: var(--colors-shade-400);
               border-radius: var(--radius-xl);
 
               font-size: 14px;
@@ -129,7 +128,7 @@
 
     padding-block-start: 1rem;
     margin-block-start: 3rem;
-    border-block-start: 1px solid var(--colors-light-300);
+    border-block-start: 1px solid var(--colors-shade-300);
 
     .selected_packages {
       strong {
